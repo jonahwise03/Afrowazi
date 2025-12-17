@@ -103,4 +103,39 @@ if (typeof emailjs !== 'undefined') {
       });
     }
   });
+
+  // Mobile menu toggle
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+    btn.setAttribute(
+      "aria-expanded",
+      menu.classList.contains("hidden") ? "false" : "true"
+    );
+  });
+
+  // Active link underline
+  const currentPage = window.location.pathname.split("/").pop();
+
+  document.querySelectorAll(".nav-item, .mobile-item").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      // underline for desktop
+      link.classList.add(
+        "after:content-['']",
+        "after:absolute",
+        "after:left-0",
+        "after:-bottom-2",
+        "after:w-full",
+        "after:h-[3px]",
+        "after:bg-white",
+        "after:rounded-full"
+      );
+
+      // bold for mobile
+      link.classList.add("font-semibold");
+    }
+  });
+
   

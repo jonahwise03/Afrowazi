@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afrowazi Pixel Arts | Pricing</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: "#0f1e2e",
+            brandGold: "#c9a24d",
+            brandBrown: "#8b6b4f"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+  <!-- Tailwind Navbar -->
+<nav class="bg-[#168ec0] shadow-sm" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+  
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 text-white font-bold">
+          <img 
+            src="assets/images/logo.png" 
+            alt="Afrowazi Pixels Logo" 
+            class="h-10 w-auto"
+          />
+          <span class="text-lg whitespace-nowrap">Afrowazi Pixels</span>
+        </a>
+  
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-white hover:text-gray-200 transition">Home</a>
+          <a href="about.html" class="text-white hover:text-gray-200 transition">About Us</a>
+          <a href="gallery.html" class="text-white hover:text-gray-200 transition">Gallery</a>
+          <a href="pricing.html" class="text-white hover:text-gray-200 transition">Pricing</a>
+          <a href="contact.html" class="text-white hover:text-gray-200 transition">Contact</a>
+        </div>
+  
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-white"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <!-- Hamburger Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#168ec0]">
+      <div class="px-4 pb-4 space-y-2">
+        <a href="index.html" class="block text-white py-2 border-b border-white/20">Home</a>
+        <a href="about.html" class="block text-white py-2 border-b border-white/20">About Us</a>
+        <a href="gallery.html" class="block text-white py-2 border-b border-white/20">Gallery</a>
+        <a href="pricing.html" class="text-white hover:text-gray-200 transition">Pricing</a>
+        <a href="contact.html" class="block text-white py-2">Contact</a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu Script -->
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+  
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+      btn.setAttribute(
+        "aria-expanded",
+        menu.classList.contains("hidden") ? "false" : "true"
+      );
+    });
+  </script>
+  
+
+<!-- PAGE WRAPPER -->
+<div class="max-w-7xl mx-auto px-6 py-16 space-y-24">
+
+  <!-- ================= INDIVIDUAL ================= -->
+  <section>
+    <h2 class="text-4xl font-serif text-center text-white mb-12">Individual Media Services</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- BASIC -->
+      <div class="bg-black text-white p-8 rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Basic Package</h3>
+        <p class="text-brandGold text-2xl mb-4">K750</p>
+        <ul class="space-y-2 text-sm">
+          <li>1 Hour Session</li>
+          <li>5 Professional Edited Images</li>
+          <li>1 Outfit</li>
+          <li>Delivery via email or link</li>
+          <li>7 Days Delivery Time</li>
+        </ul>
+      </div>
+
+      <!-- STANDARD -->
+      <div class="bg-black text-white p-8 rounded-lg border-2 border-brandGold">
+        <h3 class="text-xl font-semibold mb-2">Standard Package</h3>
+        <p class="text-brandGold text-2xl mb-4">K1,500</p>
+        <ul class="space-y-2 text-sm">
+          <li>2 Hours Coverage</li>
+          <li>5 Professional Edited Images</li>
+          <li>2 Outfits</li>
+          <li>Makeup Artist</li>
+          <li>Delivery via email or link</li>
+          <li>7 Days Delivery Time</li>
+        </ul>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="bg-black text-white p-8 rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Premium Package</h3>
+        <p class="text-brandGold text-2xl mb-4">K2,500</p>
+        <ul class="space-y-2 text-sm">
+          <li>3 Hours Coverage</li>
+          <li>5 Edited Images</li>
+          <li>2 Outfits</li>
+          <li>Makeup Artist</li>
+          <li>1-Minute Social Media Reel</li>
+          <li>Refreshments</li>
+          <li>Delivery via email or link</li>
+          <li>7 Days Delivery Time</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <button onclick="openModal('Individual Photography')" class="bg-brandGold px-8 py-3 rounded text-black font-semibold">
+        Book Now
+      </button>
+    </div>
+  </section>
+
+  <!-- ================= CORPORATE ================= -->
+  <section class="bg-brandDark text-white py-16 px-6 rounded-xl">
+    <h2 class="text-4xl font-serif text-center mb-12">Corporate Events Media Services</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 border border-white/30 rounded">
+        <h3 class="text-xl">Basic</h3>
+        <p class="text-brandGold text-2xl">K10,000</p>
+        <ul class="mt-4 text-sm space-y-2">
+          <li>3 Hours Coverage</li>
+          <li>100 Edited Images</li>
+          <li>Live Streaming</li>
+          <li>Delivery via link or flash drive</li>
+          <li>7 Days Delivery Time</li>
+        </ul>
+      </div>
+
+      <div class="p-6 border-2 border-brandGold rounded">
+        <h3 class="text-xl">Standard</h3>
+        <p class="text-brandGold text-2xl">K15,000</p>
+        <ul class="mt-4 text-sm space-y-2">
+          <li>Half Day Coverage</li>
+          <li>200 Edited Images</li>
+          <li>3-Minute Highlight Video</li>
+          <li>Live Streaming</li>
+          <li>Delivery via link or flash drive</li>
+          <li>7 Days Delivery Time</li>
+        </ul>
+      </div>
+
+      <div class="p-6 border border-white/30 rounded">
+        <h3 class="text-xl">Premium</h3>
+        <p class="text-brandGold text-2xl">K18,000</p>
+        <ul class="mt-4 text-sm space-y-2">
+          <li>Full Day Coverage</li>
+          <li>250 Edited Images</li>
+          <li>5-8 Minute Highlight Video</li>
+          <li>Live Streaming</li>
+          <li>Delivery via link or flash drive</li>
+          <li>7 Days Delivery Time</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <button onclick="openModal('Corporate Events')" class="bg-brandGold px-8 py-3 rounded text-black font-semibold">
+        Book Now
+      </button>
+    </div>
+  </section>
+
+  <!-- ================= WEDDING ================= -->
+  <section class="bg-brandBrown text-white py-16 px-6 rounded-xl">
+    <h2 class="text-4xl font-serif text-center mb-12">Wedding Photography Rates</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-white/10 rounded">
+        <h3>Basic</h3>
+        <p class="text-2xl">K3,500</p>
+        <ul class="text-sm mt-4 space-y-2">
+          <li>3 Hours Coverage</li>
+          <li>Home, Church, Couple & Family Portraits</li>
+          <li>100 Edited Images</li>
+          <li>Delivery via link or email</li>
+          <li>7 Days Delivery Time</li>
+        </ul>
+      </div>
+
+      <div class="p-6 bg-white/20 rounded">
+        <h3>Standard</h3>
+        <p class="text-2xl">K5,500</p>
+        <ul class="text-sm mt-4 space-y-2">
+          <li>Full Day Coverage</li>
+          <li>Home, Church, Couple & Family Portraits + Reception Event</li>
+          <li>200 Retouched Images</li>
+          <li>Delivery via link or email</li>
+          <li>7 Days Delivery Time</li>
+        </ul>
+      </div>
+
+      <div class="p-6 bg-white/10 rounded">
+        <h3>Premium</h3>
+        <p class="text-2xl">K10,000</p>
+        <ul class="text-sm mt-4 space-y-2">
+            <li>Full Day Coverage</li>
+            <li>Home, Church, Couple & Family Portraits + Reception Event</li>
+            <li>250 Retouched Images</li>
+            <li>5 Printed & Framed Couple Photos</li>
+            <li>Delivery via link or email</li>
+            <li>7 Days Delivery Time</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <button onclick="openModal('Wedding Photography')" class="bg-white text-brandBrown px-8 py-3 rounded font-semibold">
+        Book Now
+      </button>
+    </div>
+  </section>
+
+</div>
+
+<!-- ================= MODAL ================= -->
+<div id="bookingModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+  <div class="bg-white p-8 rounded-lg max-w-md w-full relative">
+    <button onclick="closeModal()" class="absolute top-2 right-4 text-xl">&times;</button>
+
+    <h3 id="serviceTitle" class="text-xl font-semibold mb-4"></h3>
+
+    <form class="space-y-4">
+      <input type="text" placeholder="Full Name" class="w-full border p-2 rounded">
+      <input type="tel" placeholder="Phone Number" class="w-full border p-2 rounded">
+      <input type="email" placeholder="Email Address" class="w-full border p-2 rounded">
+      <input type="date" class="w-full border p-2 rounded">
+
+      <select class="w-full border p-2 rounded">
+        <option>Basic Package</option>
+        <option>Standard Package</option>
+        <option>Premium Package</option>
+      </select>
+
+      <select class="w-full border p-2 rounded">
+        <option>Studio Shoot</option>
+        <option>Outdoor Shoot</option>
+      </select>
+
+      <button class="w-full bg-brandGold py-2 rounded font-semibold">Submit Booking</button>
+    </form>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+  function openModal(service) {
+    document.getElementById('bookingModal').classList.remove('hidden');
+    document.getElementById('bookingModal').classList.add('flex');
+    document.getElementById('serviceTitle').innerText = service;
+  }
+
+  function closeModal() {
+    document.getElementById('bookingModal').classList.add('hidden');
+  }
+</script>
+
+</body>
+</html>
