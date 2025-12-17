@@ -1,0 +1,239 @@
+/* styles.css - custom overrides and helper styles */
+:root{
+    --accent: #d86f2b; /* accent color - adjust to your brand */
+    --max-width: 1200px;
+  }
+  
+  /* Base */
+  body{
+    font-family: montserrat,system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.5;
+    color: #f8f6f6;
+    background-image: url('../images/21.jpg');
+    background-color: #168ec0;
+  }
+
+  .background-image1{
+    background-image: url('../images/bg.jpeg');
+    background-color: rgb(164, 166, 166);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .background-image1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(139, 141, 141, 0.3);
+    z-index: 0;
+  }
+
+  .background-image1 > * {
+    position: relative;
+    z-index: 1;
+  }
+  /* Hero image */
+  .hero-image{
+    max-height: 420px;
+    object-fit: cover;
+    width: 50%;
+  }
+  /* Dual hero carousels */
+  .hero .carousel,
+  .hero .carousel .carousel-inner,
+  .hero .carousel .carousel-item{
+    height: 100%;
+  }
+  .hero .carousel .carousel-item > .d-flex{
+    min-height: 60vh;
+  }
+  .hero-slide-img{
+    height: 65vh;
+    width: 100%;
+    object-fit: cover; /* crop to maintain uniform dimensions */
+  }
+  .carousel-item img{
+    max-height: 90vh;
+    object-fit: contain;
+    object-position: top;
+    /*max-width: 100%;*/
+  }
+  
+  /* Accent color */
+  .text-accent { color: var(--accent); }
+  
+  /* Focus outlines (improved keyboard visibility) */
+  :focus {
+    outline: 3px solid rgba(216,111,43,0.25);
+    outline-offset: 2px;
+  }
+  
+  /* Team cards */
+  .team-card img{
+    height: 500px;
+    object-fit: cover;
+    width: 415px;
+    align-items: center;
+  }
+  
+  /* Make carousel captions readable 
+  .carousel-caption {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  }*/
+
+  /* Enhance text readability on background image */
+  .background-image1 h1,
+  .background-image1 h2,
+  .background-image1 h3,
+  .background-image1 h4,
+  .background-image1 h5,
+  .background-image1 h6 {
+    /*text-shadow: 2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5);*/
+    color: #ffffff;
+  }
+
+  .background-image1 p,
+  .background-image1 .lead {
+    /*text-shadow: 1px 1px 6px rgba(0,0,0,0.9), 0 0 15px rgba(0,0,0,0.5);*/
+    color: #ffffff;
+  }
+
+  /* Add semi-transparent background to hero section for better readability*/
+  .background-image1 .hero {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    /*width: 50rem;
+    position:sticky;*/
+  }
+
+  /* Add background to main content sections */
+  .background-image1 main section {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Ensure buttons and links are visible 
+  .background-image1 .btn {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    font-weight: 600;
+  }*/
+
+  .background-image1 a:not(.btn) {
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    color: #ffffff;
+  }
+  .background-image2{
+  background-image: url('../images/21.jpg');
+  background-color: rgb(164, 166, 166);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.background-image3{
+  background-image: url('../images/bg2.jpg');
+  background-color: rgb(164, 166, 166);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.background-image4{
+  background-image: url('../images/bg1.jpeg');
+  background-color: rgb(164, 166, 166);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+  
+  /* Accessibility: ensure buttons are large enough */
+  .btn{
+    min-height: 40px;
+    padding: .6rem 1rem;
+  }
+  
+  /* small responsive tweaks */
+  @media (max-width: 576px){
+    .hero-image{ max-height: 240px; }
+    .display-5{ font-size: 1.6rem; }
+  }
+  
+  /* Respect reduced-motion preference */
+  @media (prefers-reduced-motion: reduce){
+    * { transition: none !important; animation: none !important; }
+  }
+  
+  /* Utility: visually-hidden (for screen reader only text) */
+  .visually-hidden { position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+  
+  /*team popup*/
+  .modal-content{
+    color: black;
+  }
+
+  /*gallery popup*/
+  .gslide-desc{
+    color: black;
+  }
+
+  
+  .slider .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+  }
+  .slider .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slider .list .item .contents{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #168ec0;
+    text-shadow: black;
+  }
+  .slider .list .item .contents .title,
+  .slider .list .item .contents .type{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+  }
+  .slider .list .item .type{
+    color: #0e6ab0cb;
+  }
+  .slider .list .item .button{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+
+  }

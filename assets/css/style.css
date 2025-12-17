@@ -1,0 +1,138 @@
+/* GLOBAL */
+body {
+    background: #fff;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  /* WRAPPER */
+  .wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* SLIDER */
+  .slider {
+    width: 100%;
+    position: relative;
+    height: 85vh;
+    margin-top: 20px;
+  }
+  
+  .slider .list {
+    height: 100%;
+    position: relative;
+  }
+  
+  .slider .item {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 0.7s ease;
+  }
+  
+  .slider .item.active {
+    opacity: 1;
+  }
+  
+  .slider .item img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  /* Text Overlay */
+  .contents {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: #fff;
+    max-width: 400px;
+  }
+  
+  .contents .title {
+    font-size: 60px;
+    font-weight: bold;
+  }
+  
+  .contents .type {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 5px 0;
+    opacity: 0.8;
+  }
+  
+  .contents .description {
+    font-size: 15px;
+    opacity: 0.9;
+  }
+  
+  /* THUMBNAILS */
+  .thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 20px;
+  }
+  
+  .thumb {
+    width: 90px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .thumb.active {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  /* ARROWS */
+  .nextprev {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nextprev button {
+    background: rgba(0,0,0,0.4);
+    border: none;
+    color: white;
+    font-size: 32px;
+    width: 50px;
+    height: 70px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .nextprev button:hover {
+    background: rgba(0,0,0,0.7);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .contents .title { font-size: 26px; }
+    .contents .type { font-size: 14px; }
+    .contents .description { font-size: 13px; }
+    .thumb { width: 70px; height: 50px; }
+  }
+  
+  @media (max-width: 576px) {
+    .slider { height: 70vh; }
+    .contents { bottom: 5%; left: 4%; }
+    .contents .title { font-size: 22px; }
+    .nextprev button { width: 35px; height: 55px; font-size: 24px; }
+  }
+  
