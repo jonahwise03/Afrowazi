@@ -253,3 +253,47 @@
     grid-template-columns: repeat(2, 130px);
 
   }
+
+  /* 1. Ensure all thumbnails are the same size/shape */
+.img-wrapper {
+  aspect-ratio: 1 / 1; /* Makes images perfectly square. Use 3/4 for portrait. */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops image to fill the square without stretching */
+  transition: transform 0.3s ease;
+}
+
+/* 2. Mobile Touch Effect */
+.gallery-card:active .img-wrapper img {
+  transform: scale(0.95);
+  filter: brightness(0.8);
+}
+
+/* 3. Style the Link inside the GLightbox to look like a Button */
+.btn-lightbox {
+  display: inline-block;
+  background-color: #168ec0; /* Your brand blue */
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%; /* Full width on mobile for easy clicking */
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* 4. Adjust GLightbox text size for mobile */
+@media (max-width: 768px) {
+  .gdesc-inner {
+    padding: 15px !important;
+  }
+  .gslide-title {
+    font-size: 1.2rem !important;
+  }
+}
