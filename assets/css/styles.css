@@ -297,3 +297,27 @@
     font-size: 1.2rem !important;
   }
 }
+
+/* Styling for the button inside the Lightbox popup */
+.btn-lightbox-button {
+  background-color: #168ec0; /* Your brand blue */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100%; /* Makes it a large tap target on mobile */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s active;
+  display: block;
+  text-align: center;
+}
+
+.btn-lightbox-button:hover {
+  background-color: #1379a3; /* Slightly darker on hover */
+}
+
+.btn-lightbox-button:active {
+  transform: scale(0.98); /* Slight "press" effect when tapped */
+}
