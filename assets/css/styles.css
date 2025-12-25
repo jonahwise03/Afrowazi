@@ -307,7 +307,9 @@
 .gallery-link:hover .img-overlay,
 .gallery-link:active .img-overlay {
   opacity: 1;
-}/* 1. Keep all thumbnails uniform in size */
+}
+
+/* 1. Keep all thumbnails uniform in size */
 .img-wrapper {
   position: relative;
   aspect-ratio: 1 / 1; /* Square thumbnails */
