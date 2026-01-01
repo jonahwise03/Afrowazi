@@ -271,7 +271,7 @@
 
     <h3 id="serviceTitle" class="text-xl font-semibold mb-4"></h3>
 
-    <form class="space-y-4">
+    <form class="space-y-4" id="bookingForm">
       <input type="text" placeholder="Full Name" class="w-full border p-2 rounded">
       <input type="tel" placeholder="Phone Number" class="w-full border p-2 rounded">
       <input type="email" placeholder="Email Address" class="w-full border p-2 rounded">
@@ -288,7 +288,7 @@
         <option>Outdoor Shoot</option>
       </select>
 
-      <button class="w-full bg-brandGold py-2 rounded font-semibold">Submit Booking</button>
+      <button class="w-full bg-brandGold py-2 rounded font-semibold" type="submit">Submit Booking</button>
     </form>
   </div>
 </div>
@@ -341,6 +341,7 @@
     document.getElementById('bookingModal').classList.add('hidden');
   }
 </script>
+<script src="assets/js/in.js"></script>
 
 <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };

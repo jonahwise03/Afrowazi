@@ -24,85 +24,33 @@ if (typeof emailjs !== 'undefined') {
     });
   })();
   
-  /* Contact form submit via EmailJS */
-  document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
-    const bookingForm = document.getElementById('bookingForm');
-  
     // ---- Contact form handling ----
-    if (contactForm) {
-      contactForm.addEventListener('submit', function (ev) {
-        ev.preventDefault();
-        ev.stopPropagation();
-  
-        if (!contactForm.checkValidity()) {
-          contactForm.classList.add('was-validated');
-          return;
-        }
-  
-        const contactStatus = document.getElementById('contactStatus');
-        contactStatus.textContent = 'Sending…';
-  
-        // Example using EmailJS - replace serviceID and templateID
-        // Create a template in EmailJS with fields matching the form names (from_name, reply_to, message)
-        if (typeof emailjs !== 'undefined' && emailjs.send) {
-          emailjs.sendForm('YOUR_EMAILJS_SERVICE_ID','YOUR_EMAILJS_CONTACT_TEMPLATE_ID', contactForm)
-            .then(function() {
-              contactStatus.className = 'text-success';
-              contactStatus.textContent = 'Thank you — your message has been sent.';
-              contactForm.reset();
-              contactForm.classList.remove('was-validated');
-            }, function(error) {
-              contactStatus.className = 'text-danger';
-              contactStatus.textContent = 'Sorry, an error occurred. Please try again later.';
-              console.error('EmailJS error:', error);
-            });
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Stop the page from refreshing
+    
+      // 1. Capture the data from the form
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+    
+      // 2. Send the data as JSON
+      fetch('action="https://formspree.io/f/xojvvojd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', // This tells the server JSON is coming
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data) // This converts the data to a JSON string
+      })
+      .then(response => {
+        if (response.ok) {
+          alert('Message sent successfully!');
+          this.reset();
         } else {
-          // If EmailJS not configured, fallback to showing the form data in console
-          console.warn('EmailJS not available — configure emailjs.init and service/template IDs.');
-          contactStatus.className = 'text-warning';
-          contactStatus.textContent = 'Email service not configured. Check console for details.';
-          console.log('Contact form values:', new FormData(contactForm));
+          alert('Something went wrong. Please try again.');
         }
-      });
-    }
-  
-    // ---- Booking form handling ----
-    if (bookingForm) {
-      bookingForm.addEventListener('submit', function (ev) {
-        ev.preventDefault();
-        ev.stopPropagation();
-  
-        if (!bookingForm.checkValidity()) {
-          bookingForm.classList.add('was-validated');
-          return;
-        }
-  
-        const bookingStatus = document.getElementById('bookingStatus');
-        bookingStatus.textContent = 'Sending booking request…';
-  
-        // Example using EmailJS - replace serviceID and templateID
-        if (typeof emailjs !== 'undefined' && emailjs.send) {
-          emailjs.sendForm('YOUR_EMAILJS_SERVICE_ID','YOUR_EMAILJS_BOOKING_TEMPLATE_ID', bookingForm)
-            .then(function() {
-              bookingStatus.className = 'text-success';
-              bookingStatus.textContent = 'Booking request sent — we will contact you soon.';
-              bookingForm.reset();
-              bookingForm.classList.remove('was-validated');
-            }, function(error) {
-              bookingStatus.className = 'text-danger';
-              bookingStatus.textContent = 'Sorry, an error occurred. Please try again later.';
-              console.error('EmailJS error:', error);
-            });
-        } else {
-          console.warn('EmailJS not available — configure emailjs.init and service/template IDs.');
-          bookingStatus.className = 'text-warning';
-          bookingStatus.textContent = 'Email service not configured. Check console for details.';
-          console.log('Booking form values:', new FormData(bookingForm));
-        }
-      });
-    }
-  });
+      })
+      .catch(error => console.error('Error:', error));
+    });
 
   // Mobile menu toggle
   const btn = document.getElementById("menu-btn");
