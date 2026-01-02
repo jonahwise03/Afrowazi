@@ -33,7 +33,7 @@ if (typeof emailjs !== 'undefined') {
       const data = Object.fromEntries(formData.entries());
     
       // 2. Send the data as JSON
-      fetch('action="https://formspree.io/f/xojvvojd', {
+      fetch('https://formspree.io/f/xojvvojd', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // This tells the server JSON is coming
