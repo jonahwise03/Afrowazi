@@ -272,22 +272,32 @@
     <h3 id="serviceTitle" class="text-xl font-semibold mb-4"></h3>
 
     <form class="space-y-4" id="bookingForm">
-      <input type="text" placeholder="Full Name" class="w-full border p-2 rounded">
-      <input type="tel" placeholder="Phone Number" class="w-full border p-2 rounded">
-      <input type="email" placeholder="Email Address" class="w-full border p-2 rounded">
-      <input type="date" class="w-full border p-2 rounded">
+      <input type="text" name="full_name" placeholder="Full Name" class="w-full border p-2 rounded" required>
+      
+      <input type="tel" name="phone" placeholder="Phone Number" class="w-full border p-2 rounded" required>
+      
+      <input type="email" name="email" placeholder="Email Address" class="w-full border p-2 rounded" required>
+      
+      <input type="date" name="date" class="w-full border p-2 rounded" required>
 
-      <select class="w-full border p-2 rounded">
-        <option>Basic Package</option>
-        <option>Standard Package</option>
-        <option>Premium Package</option>
+      <select name="type" class="w-full border p-2 rounded">
+        <option value="individual">Individual</option>
+        <option value="corporate">Corporate</option>
+        <option value="weddings">Weddings Event</option>
       </select>
-
-      <select class="w-full border p-2 rounded">
-        <option>Studio Shoot</option>
-        <option>Outdoor Shoot</option>
+    
+      <select name="package" class="w-full border p-2 rounded">
+        <option value="basic">Basic Package</option>
+        <option value="standard">Standard Package</option>
+        <option value="premium">Premium Package</option>
       </select>
-
+    
+      <select name="location" class="w-full border p-2 rounded">
+        <option value="studio">Studio Shoot</option>
+        <option value="outdoor">Outdoor Shoot</option>
+      </select>
+      <input type="hidden" name="_subject" value="New Booking Request from Afrowazi Pixels">
+    
       <button class="w-full bg-brandGold py-2 rounded font-semibold" type="submit">Submit Booking</button>
     </form>
   </div>

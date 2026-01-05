@@ -26,30 +26,41 @@ if (typeof emailjs !== 'undefined') {
   
     // ---- Contact form handling ----
     document.getElementById('bookingForm').addEventListener('submit', function(e) {
-      e.preventDefault(); // Stop the page from refreshing
+      e.preventDefault(); 
     
-      // 1. Capture the data from the form
+      // Capture the data
       const formData = new FormData(this);
       const data = Object.fromEntries(formData.entries());
     
-      // 2. Send the data as JSON
-      fetch('https://formspree.io/f/xojvvojd', {
+      // Simple check: Don't send if the data is empty
+      if (Object.keys(data).length === 0) {
+        console.error("Form data is empty. Check your 'name' attributes.");
+        return;
+      }
+    
+      fetch('https://formspree.io/f/xojvrrln', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json', // This tells the server JSON is coming
+          'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify(data) // This converts the data to a JSON string
+        body: JSON.stringify(data)
       })
       .then(response => {
         if (response.ok) {
           alert('Message sent successfully!');
           this.reset();
         } else {
-          alert('Something went wrong. Please try again.');
+          // Formspree provides error details in the JSON response
+          return response.json().then(errData => {
+            console.error("Server Error:", errData);
+            alert('Error: ' + (errData.error || 'Something went wrong.'));
+          });
         }
       })
-      .catch(error => console.error('Error:', error));
+      .catch(error => {
+        console.error('Fetch Error:', error);
+      });
     });
 
   // Mobile menu toggle
