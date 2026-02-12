@@ -11,7 +11,7 @@
     color: #f8f6f6;
     height: 100%;
     margin: 0;
-    background-image: url('../images/website/traditional/8R0A0205.jpg');
+    background-image: url('../images/website/traditional/8R0A0205.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
   }
 
   .background-image1{
-    background-image: url('../images/bg.jpeg');
+    background-image: url('../images/bg.webp');
     background-color: rgb(164, 166, 166);
     background-size: cover;
     background-position: center;
@@ -140,7 +140,7 @@
     color: #ffffff;
   }
   .background-image2{
-  background-image: url('../images/website/traditional/8R0A0112.jpg');
+  background-image: url('../images/website/traditional/8R0A0112.webp');
   background-color: rgb(164, 166, 166);
   background-size: cover;
   background-position: center;
@@ -152,7 +152,7 @@
 }
 
 .background-image3{
-  background-image: url('../images/bg2.jpg');
+  background-image: url('../images/bg2.webp');
   background-color: rgb(164, 166, 166);
   background-size: cover;
   background-position: center;
@@ -164,7 +164,7 @@
 }
 
 .background-image4{
-  background-image: url('../images/bg1.jpeg');
+  background-image: url('../images/bg1.webp');
   background-color: rgb(164, 166, 166);
   background-size: cover;
   background-position: center;
