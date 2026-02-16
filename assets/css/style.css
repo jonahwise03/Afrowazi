@@ -5,6 +5,12 @@ body {
     margin: 0;
     overflow-x: hidden;
   }
+
+  .antic-didone-regular {
+    font-family: "Antic Didone", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
   
   /* WRAPPER */
   .wrapper {
