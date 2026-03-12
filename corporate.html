@@ -120,7 +120,7 @@
           <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
           <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
         </nav>
-      </main>
+      </main> 
       
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -130,6 +130,46 @@
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
+  
+  <script>
+    // 1. Grab the slider and your existing buttons
+    const slider = document.querySelector('.slider');
+    const nextBtn = document.querySelector('.nav .next');
+    const prevBtn = document.querySelector('.nav .prev');
+  
+    // Variables to track where the touch starts and ends
+    let touchStartX = 0;
+    let touchEndX = 0;
+  
+    // The minimum distance (in pixels) the finger must move to trigger a swipe
+    const minSwipeDistance = 50; 
+  
+    // 2. Listen for the start of a touch
+    slider.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+  
+    // 3. Listen for the end of a touch
+    slider.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+  
+    // 4. Calculate the direction and trigger the correct button
+    function handleSwipe() {
+      const swipeDistance = touchEndX - touchStartX;
+  
+      // Swipe Left (Negative distance) -> Go to Next Image
+      if (swipeDistance < -minSwipeDistance) {
+        nextBtn.click(); 
+      }
+      // Swipe Right (Positive distance) -> Go to Previous Image
+      else if (swipeDistance > minSwipeDistance) {
+        prevBtn.click(); 
+      }
+    }
+  </script>
+
   <script defer src="/_vercel/insights/script.js"></script>
   
   <script>
