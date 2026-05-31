@@ -35,3 +35,40 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
   })
   .catch(error => console.error('Error:', error));
 });
+
+// Grab the slider and your existing buttons
+const slider = document.querySelector('.slider');
+const nextBtn = document.querySelector('.nav .next');
+const prevBtn = document.querySelector('.nav .prev');
+
+// Variables to track where the touch starts and ends
+let touchStartX = 0;
+let touchEndX = 0;
+
+// The minimum distance (in pixels) the finger must move to trigger a swipe
+const minSwipeDistance = 50; 
+
+// Listen for the start of a touch
+slider.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+// Listen for the end of a touch
+slider.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+}, { passive: true });
+
+// Calculate the direction and trigger the correct button
+function handleSwipe() {
+  const swipeDistance = touchEndX - touchStartX;
+
+  // Swipe Left (Negative distance) -> Go to Next Image
+  if (swipeDistance < -minSwipeDistance) {
+    nextBtn.click(); 
+  }
+  // Swipe Right (Positive distance) -> Go to Previous Image
+  else if (swipeDistance > minSwipeDistance) {
+    prevBtn.click(); 
+  }
+}
