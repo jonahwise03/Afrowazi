@@ -36,7 +36,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
   .catch(error => console.error('Error:', error));
 });
 
-// Grab the slider and your existing buttons
+/* Grab the slider and your existing buttons
 const slider = document.querySelector('.slider');
 const nextBtn = document.querySelector('.nav .next');
 const prevBtn = document.querySelector('.nav .prev');
@@ -71,4 +71,4 @@ function handleSwipe() {
   else if (swipeDistance > minSwipeDistance) {
     prevBtn.click(); 
   }
-}
+}*/
