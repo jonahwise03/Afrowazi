@@ -24,20 +24,20 @@ if (typeof emailjs !== 'undefined') {
     });
   })();
   
-    // ---- Contact form handling ----
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
-      e.preventDefault(); 
-    
-      // Capture the data
+  // ---- Contact form handling (contact page only) ----
+  const bookingForm = document.getElementById('bookingForm');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
       const formData = new FormData(this);
       const data = Object.fromEntries(formData.entries());
-    
-      // Simple check: Don't send if the data is empty
+
       if (Object.keys(data).length === 0) {
         console.error("Form data is empty. Check your 'name' attributes.");
         return;
       }
-    
+
       fetch('https://formspree.io/f/xojvrrln', {
         method: 'POST',
         headers: {
@@ -46,37 +46,44 @@ if (typeof emailjs !== 'undefined') {
         },
         body: JSON.stringify(data)
       })
-      .then(response => {
-        if (response.ok) {
-          alert('Message sent successfully!');
-          this.reset();
-        } else {
-          // Formspree provides error details in the JSON response
-          return response.json().then(errData => {
-            console.error("Server Error:", errData);
-            alert('Error: ' + (errData.error || 'Something went wrong.'));
-          });
-        }
-      })
-      .catch(error => {
-        console.error('Fetch Error:', error);
-      });
+        .then(response => {
+          if (response.ok) {
+            alert('Message sent successfully!');
+            this.reset();
+          } else {
+            return response.json().then(errData => {
+              console.error("Server Error:", errData);
+              alert('Error: ' + (errData.error || 'Something went wrong.'));
+            });
+          }
+        })
+        .catch(error => {
+          console.error('Fetch Error:', error);
+        });
     });
+  }
 
-  // Mobile menu toggle
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mobile-menu");
+  // Mobile menu toggle (Tailwind nav: index, gallery, contact, etc.)
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-    btn.setAttribute(
-      "aria-expanded",
-      menu.classList.contains("hidden") ? "false" : "true"
+  if (menuBtn && mobileMenu) {
+    menuBtn.setAttribute(
+      'aria-expanded',
+      mobileMenu.classList.contains('hidden') ? 'false' : 'true'
     );
-  });
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute(
+        'aria-expanded',
+        mobileMenu.classList.contains('hidden') ? 'false' : 'true'
+      );
+    });
+  }
 
   // Active link underline
-  const currentPage = window.location.pathname.split("/").pop();
+  const currentPage = window.location.pathname.split("/").pop() || 'index.html';
 
   document.querySelectorAll(".nav-item, .mobile-item").forEach(link => {
     if (link.getAttribute("href") === currentPage) {

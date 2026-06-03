@@ -107,8 +107,12 @@
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 5;
+    z-index: 1050;
     user-select: none;
+  }
+
+  .navbar .navbar-toggler {
+    pointer-events: auto;
   }
 
   .nav {

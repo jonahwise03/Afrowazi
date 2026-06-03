@@ -79,7 +79,7 @@
           id="menu-btn"
           class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-white"
           aria-label="Toggle menu"
-          aria-expanded="true"
+          aria-expanded="false"
         >
           <!-- Hamburger Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
@@ -103,21 +103,6 @@
     </div>
   </nav>
   
-  <!-- Mobile Menu Script -->
-  <script>
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
-  
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-      btn.setAttribute(
-        "aria-expanded",
-        menu.classList.contains("hidden") ? "false" : "true"
-      );
-    });
-  </script>
-  
-
 <!-- PAGE WRAPPER -->
 <div class="max-w-7xl mx-auto px-6 py-16 space-y-24">
 
@@ -401,6 +386,7 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 
 <!-- SCRIPT -->
 <script>
