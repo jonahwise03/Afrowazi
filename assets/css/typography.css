@@ -1,0 +1,87 @@
+/**
+ * Site typography — Antic Didone (headings, subtitles, buttons), Lato Light (body copy)
+ * Load via @import in styles.css, style1.css, style2.css, or style.css
+ */
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Lato:wght@300;400&display=swap');
+
+:root {
+  --font-heading: "Antic Didone", Georgia, serif;
+  --font-subtitle: "Antic Didone", Georgia, serif;
+  --font-button: "Antic Didone", Georgia, serif;
+  --font-body: "Lato", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-weight-heading: 400;
+  --font-weight-subtitle: 400;
+  --font-weight-button: 400;
+  --font-weight-body: 300;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+.contents .title,
+.slider .list .item .contents .title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-style: normal;
+}
+
+/* Subtitles & lead lines */
+.lead,
+.subtitle,
+h2.h3,
+.contents .type,
+.slider .list .item .contents .type {
+  font-family: var(--font-subtitle);
+  font-weight: var(--font-weight-subtitle);
+  font-style: normal;
+}
+
+/* Buttons */
+.btn,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.content button,
+.contents button,
+.nav .btn,
+.nextprev button {
+  font-family: var(--font-button);
+  font-weight: var(--font-weight-button);
+  font-style: normal;
+}
+
+/* Body & paragraph text */
+body,
+p,
+li,
+label,
+input:not([type="button"]):not([type="submit"]):not([type="reset"]),
+textarea,
+select,
+.nav-link,
+.footer-basic,
+.footer-basic p,
+.footer-basic li,
+.footer-basic .copyright,
+.modal-content,
+.gslide-desc,
+.contents .description {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
+}
+
+/* Utility: force Antic Didone where needed */
+.font-heading,
+.font-button,
+.antic-didone-regular {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-style: normal;
+}
+
+.font-body {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
+}

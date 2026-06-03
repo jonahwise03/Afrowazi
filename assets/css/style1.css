@@ -1,3 +1,5 @@
+@import url('typography.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +11,7 @@
     display: grid;
     place-items: center;
     overflow: hidden;
-    font-family: Antic Didone;
   }
-
-  .antic-didone-regular {
-    font-family: "Antic Didone", serif;
-    font-weight: 400;
-    font-style: normal;
-  }  
   
   main {
     position: relative;
@@ -63,14 +58,13 @@
     top: 50%;
     left: 3rem;
     transform: translateY(-50%);
-    font: 400 0.85rem helvetica,sans-serif;
+    font-size: 0.85rem;
     color: white;
     text-shadow: 0 3px 8px rgba(0,0,0,0.5);
     opacity: 0;
     display: none;
   
     & .title {
-      font-family: 'arial-black';
       text-transform: uppercase;
       margin: 12rem 0 1rem;
     }

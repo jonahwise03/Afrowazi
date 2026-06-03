@@ -1,15 +1,10 @@
+@import url('typography.css');
+
 .footer-basic {
     padding:40px 0;
     background-color:#168ec0;
     color:#edeeef;
-    font-family: Antic Didone;
   }
-
-  .antic-didone-regular {
-    font-family: "Antic Didone", serif;
-    font-weight: 400;
-    font-style: normal;
-  }  
   
   .footer-basic ul {
     padding:0;

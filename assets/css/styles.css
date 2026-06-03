@@ -1,4 +1,6 @@
 /* styles.css - custom overrides and helper styles */
+@import url('typography.css');
+
 :root{
     --accent: #d86f2b; /* accent color - adjust to your brand */
     --max-width: 1200px;
@@ -6,7 +8,6 @@
   
   /* Base */
   body{
-    font-family: antic-didone-regular;
     line-height: 1.5;
     color: #f8f6f6;
     height: 100%;
@@ -18,12 +19,6 @@
     background-attachment: fixed;
     background-color: #168ec0;
   }
-
-  .antic-didone-regular {
-    font-family: "Antic Didone", serif;
-    font-weight: 400;
-    font-style: normal;
-  }  
 
   .background-image1{
     background-image: url('../images/bg.jpg.jpeg');
