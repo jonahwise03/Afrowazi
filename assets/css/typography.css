@@ -37,6 +37,13 @@ h2.h3,
   font-style: normal;
 }
 
+/* Gallery overlay labels (gallery.html) */
+.img-overlay span {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-style: normal;
+}
+
 /* Buttons */
 .btn,
 button,

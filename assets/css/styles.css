@@ -301,7 +301,7 @@
 
 .img-overlay span {
   color: white;
-  font-weight: bold;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 0.8rem;
   border: 1px solid white;
@@ -356,7 +356,7 @@
 
 .img-overlay span {
   color: white;
-  font-weight: bold;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 0.8rem;
   border: 1px solid white;
