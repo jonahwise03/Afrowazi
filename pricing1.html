@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Q34DZPXJ6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Q34DZPXJ6');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afrowazi Pixel Arts - Pricing</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/images/WEBSITE LOGO-1.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/style2.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: "#0f1e2e",
+            brandGold: "#c9a24d",
+            brandBrown: "#8b6b4f",
+            brandBlue: "#168ec0"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --gold: #c9a24d;
+      --gold-dark: #a07c30;
+      --gold-pale: rgba(201,162,77,0.12);
+      --dark: #0f1e2e;
+      --dark2: #162840;
+      --border-gold: rgba(201,162,77,0.3);
+      --border-light: rgba(255,255,255,0.12);
+      --white: #ffffff;
+      --text-muted: rgba(255,255,255,0.6);
+    }
+
+    .pricing-page {
+      background: var(--dark);
+      font-family: 'Jost', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── HERO ── */
+    .pricing-hero {
+      text-align: center;
+      padding: 5rem 1.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .pricing-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,162,77,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 6vw, 58px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: 15px;
+      color: var(--text-muted);
+      font-weight: 300;
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.75;
+    }
+    .quality-bar {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      padding: 1.5rem 0;
+      border-top: 0.5px solid var(--border-gold);
+      border-bottom: 0.5px solid var(--border-gold);
+      margin: 0 auto;
+      max-width: 800px;
+    }
+    .qb-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+    .qb-item i { color: var(--gold); font-size: 16px; }
+
+    /* ── TABS ── */
+    .tab-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      padding: 2rem 1.5rem 1.5rem;
+      border-bottom: 0.5px solid var(--border-light);
+    }
+    .tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      border: 0.5px solid var(--border-light);
+      background: transparent;
+      border-radius: 30px;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-family: 'Jost', sans-serif;
+      transition: all 0.25s;
+    }
+    .tab-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .tab-btn.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--dark);
+      font-weight: 500;
+    }
+    .tab-btn i { font-size: 14px; }
+
+    /* ── SECTIONS ── */
+    .tab-section { display: none; padding: 3rem 1.5rem 4rem; }
+    .tab-section.active { display: block; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .section-header p {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    /* ── CARDS ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+    }
+    .price-card {
+      background: var(--dark2);
+      border: 0.5px solid var(--border-light);
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      position: relative;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .price-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+    .price-card.featured {
+      border: 1.5px solid var(--gold);
+      background: linear-gradient(145deg, var(--dark2) 0%, rgba(201,162,77,0.06) 100%);
+    }
+    .card-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+      font-family: 'Jost', sans-serif;
+    }
+    .card-tier {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .card-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+    .card-price {
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+    .card-price-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .card-divider {
+      height: 0.5px;
+      background: var(--border-light);
+      margin: 1rem 0;
+    }
+    .card-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.25rem;
+    }
+    .card-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    .card-features li i {
+      color: var(--gold);
+      font-size: 14px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+    .card-cta {
+      width: 100%;
+      padding: 10px;
+      border: 0.5px solid var(--gold);
+      background: transparent;
+      border-radius: 8px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .card-cta:hover, .price-card.featured .card-cta {
+      background: var(--gold);
+      color: var(--dark);
+    }
+    .price-card.featured .card-cta:hover {
+      background: var(--gold-dark);
+      border-color: var(--gold-dark);
+    }
+
+    /* ── NOTE BAR ── */
+    .note-bar {
+      background: rgba(201,162,77,0.08);
+      border: 0.5px solid var(--border-gold);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 0 auto;
+      max-width: 1000px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.65;
+    }
+    .note-bar i { color: var(--gold); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+    /* ── STREAMING WIDE CARDS ── */
+    .stream-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      max-width: 1000px;
+      margin: 0 auto 1.25rem;
+    }
+    @media(max-width: 640px) {
+      .stream-grid { grid-template-columns: 1fr; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+    .wide-card {
+      background: var(--dark2);
+      border: 0.5px solid var(--border-light);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: border-color 0.25s;
+    }
+    .wide-card:hover { border-color: var(--gold); }
+    .wide-card > i { font-size: 24px; color: var(--gold); display: block; margin-bottom: 10px; }
+    .wide-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .wide-card .desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.65;
+      font-weight: 300;
+    }
+    .pkg-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 0;
+      border-bottom: 0.5px solid var(--border-light);
+      font-size: 13px;
+    }
+    .pkg-row:last-of-type { border-bottom: none; }
+    .pkg-row .lbl { color: var(--text-muted); }
+    .pkg-row .prc { font-weight: 500; color: var(--gold); }
+
+    /* ── FOOTER CTA ── */
+    .footer-cta-section {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border-top: 0.5px solid var(--border-gold);
+      margin-top: 1rem;
+    }
+    .footer-cta-section p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      font-weight: 300;
+    }
+    .footer-cta-section .cta-main {
+      display: inline-block;
+      padding: 13px 36px;
+      background: var(--gold);
+      border: none;
+      color: var(--dark);
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .footer-cta-section .cta-main:hover { background: var(--gold-dark); }
+
+    /* ── BOOKING MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--dark2);
+      border: 0.5px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 2.5rem;
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+      font-family: 'Jost', sans-serif;
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.25rem;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 22px;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .modal-close:hover { color: var(--gold); }
+    .modal-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+    .modal-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .modal-box input,
+    .modal-box select,
+    .modal-box textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 0.5px solid var(--border-light);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      margin-bottom: 0.75rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .modal-box input:focus,
+    .modal-box select:focus { border-color: var(--gold); }
+    .modal-box select option { background: var(--dark2); color: #fff; }
+    .modal-box input::placeholder { color: rgba(255,255,255,0.35); }
+    .modal-policy {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      background: rgba(201,162,77,0.07);
+      border-radius: 8px;
+      border-left: 2px solid var(--gold);
+    }
+    .modal-submit {
+      width: 100%;
+      padding: 12px;
+      background: var(--gold);
+      border: none;
+      color: var(--dark);
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: 'Jost', sans-serif;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .modal-submit:hover { background: var(--gold-dark); }
+  </style>
+</head>
+
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav class="bg-[#168ec0] shadow-sm" aria-label="Main navigation">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3 text-white font-bold">
+        <img src="assets/images/WEBSITE LOGO-1.png" alt="Afrowazi Pixels Logo" class="h-10 w-auto"/>
+        <span class="text-lg whitespace-nowrap">Afrowazi Pixel Arts</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-white hover:text-gray-200 transition">Home</a>
+        <a href="about.html" class="text-white hover:text-gray-200 transition">About Us</a>
+        <a href="gallery.html" class="text-white hover:text-gray-200 transition">Gallery</a>
+        <a href="pricing.html" class="text-white hover:text-gray-200 transition font-semibold underline underline-offset-4">Pricing</a>
+        <a href="contact.html" class="text-white hover:text-gray-200 transition">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-white" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-[#168ec0]">
+    <div class="px-4 pb-4 space-y-2">
+      <a href="index.html" class="block text-white py-2 border-b border-white/20">Home</a>
+      <a href="about.html" class="block text-white py-2 border-b border-white/20">About Us</a>
+      <a href="gallery.html" class="block text-white py-2 border-b border-white/20">Gallery</a>
+      <a href="pricing.html" class="block text-white py-2 border-b border-white/20">Pricing</a>
+      <a href="contact.html" class="block text-white py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════ PRICING PAGE ══════════════════ -->
+<div class="pricing-page">
+
+  <!-- HERO -->
+  <div class="pricing-hero">
+    <div class="hero-eyebrow">Est. 2020 · Afrowazi Pixel Arts · Lusaka, Zambia</div>
+    <h1 class="hero-title">Pricing Built on <em>Quality,</em><br>Not Compromise</h1>
+    <p class="hero-sub">Every package is crafted to deliver exceptional work — because your memories and brand deserve nothing less. Choose the experience that fits your vision.</p>
+    <div class="quality-bar">
+      <div class="qb-item"><i class="ti ti-award"></i> Award-worthy portfolio</div>
+      <div class="qb-item"><i class="ti ti-certificate"></i> Professional-grade equipment</div>
+      <div class="qb-item"><i class="ti ti-clock"></i> 7-day delivery</div>
+      <div class="qb-item"><i class="ti ti-shield-check"></i> Satisfaction guaranteed</div>
+    </div>
+  </div>
+
+  <!-- TAB NAV -->
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="showTab('individual', this)">
+      <i class="ti ti-user"></i> Individual
+    </button>
+    <button class="tab-btn" onclick="showTab('graduation', this)">
+      <i class="ti ti-school"></i> Graduation
+    </button>
+    <button class="tab-btn" onclick="showTab('weddings', this)">
+      <i class="ti ti-heart"></i> Weddings
+    </button>
+    <button class="tab-btn" onclick="showTab('corporate', this)">
+      <i class="ti ti-briefcase"></i> Corporate
+    </button>
+    <button class="tab-btn" onclick="showTab('streaming', this)">
+      <i class="ti ti-video"></i> Live Streaming & Video
+    </button>
+  </div>
+
+  <!-- ══ INDIVIDUAL ══ -->
+  <div class="tab-section active" id="individual">
+    <div class="section-header">
+      <h2>Individual Media Services</h2>
+      <p>Portraits, headshots and personal branding — crafted with care and precision.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="price-card">
+        <div class="card-tier">Essential</div>
+        <div class="card-name">Basic Package</div>
+        <div class="card-price">K750</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>5 professionally edited images</li>
+          <li><i class="ti ti-check"></i>1 outfit</li>
+          <li><i class="ti ti-check"></i>Delivery via email or link</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Individual — Basic Package')">Book Now</button>
+      </div>
+
+      <div class="price-card featured">
+        <div class="card-badge">Most Popular</div>
+        <div class="card-tier">Signature</div>
+        <div class="card-name">Standard Package</div>
+        <div class="card-price">K1,500</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>10 professionally edited images</li>
+          <li><i class="ti ti-check"></i>2 outfits</li>
+          <li><i class="ti ti-check"></i>Delivery via email or link</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Individual — Standard Package')">Book Now</button>
+      </div>
+
+      <div class="price-card">
+        <div class="card-tier">Premium</div>
+        <div class="card-name">Premium Package</div>
+        <div class="card-price">K3,000</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>15 edited images</li>
+          <li><i class="ti ti-check"></i>4 outfits</li>
+          <li><i class="ti ti-check"></i>1-minute social media reel</li>
+          <li><i class="ti ti-check"></i>Refreshments included</li>
+          <li><i class="ti ti-check"></i>Delivery via email or link</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Individual — Premium Package')">Book Now</button>
+      </div>
+    </div>
+    <div class="note-bar">
+      <i class="ti ti-info-circle"></i>
+      All individual sessions include a complimentary style consultation. Studio and outdoor locations available. Hair & makeup artists can be arranged on request.
+    </div>
+  </div>
+
+  <!-- ══ GRADUATION ══ -->
+  <div class="tab-section" id="graduation">
+    <div class="section-header">
+      <h2>Graduation Events Media Services</h2>
+      <p>Celebrate your achievement with images that honour the journey and the milestone.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="price-card">
+        <div class="card-tier">Essential</div>
+        <div class="card-name">Basic</div>
+        <div class="card-price">K500</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>1 hour coverage</li>
+          <li><i class="ti ti-check"></i>5 edited images</li>
+          <li><i class="ti ti-check"></i>Delivery via link or flash drive</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Graduation — Basic')">Book Now</button>
+      </div>
+
+      <div class="price-card featured">
+        <div class="card-badge">Best Value</div>
+        <div class="card-tier">Classic</div>
+        <div class="card-name">Standard</div>
+        <div class="card-price">K1,500</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>2 hours coverage</li>
+          <li><i class="ti ti-check"></i>15 edited images</li>
+          <li><i class="ti ti-check"></i>Delivery via link or flash drive</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Graduation — Standard')">Book Now</button>
+      </div>
+
+      <div class="price-card">
+        <div class="card-tier">Premium</div>
+        <div class="card-name">Premium</div>
+        <div class="card-price">K2,000</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>2 hours coverage</li>
+          <li><i class="ti ti-check"></i>20 edited images</li>
+          <li><i class="ti ti-check"></i>1-minute social media reel</li>
+          <li><i class="ti ti-check"></i>Delivery via link or flash drive</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Graduation — Premium')">Book Now</button>
+      </div>
+    </div>
+    <div class="note-bar">
+      <i class="ti ti-info-circle"></i>
+      Group graduation packages available for schools and universities. Bulk bookings of 5+ students receive a 15% discount. Enquire for ceremony day coverage rates.
+    </div>
+  </div>
+
+  <!-- ══ WEDDINGS ══ -->
+  <div class="tab-section" id="weddings">
+    <div class="section-header">
+      <h2>Wedding Photography Rates</h2>
+      <p>From intimate ceremonies to grand celebrations — every love story told beautifully.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="price-card">
+        <div class="card-tier">Essential</div>
+        <div class="card-name">Basic</div>
+        <div class="card-price">K5,000</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>3 hours coverage</li>
+          <li><i class="ti ti-check"></i>Home, church, couple & family portraits</li>
+          <li><i class="ti ti-check"></i>100 edited images</li>
+          <li><i class="ti ti-check"></i>Delivery via link or email</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Wedding Photography — Basic')">Book Now</button>
+      </div>
+
+      <div class="price-card featured">
+        <div class="card-badge">Most Popular</div>
+        <div class="card-tier">Signature</div>
+        <div class="card-name">Standard</div>
+        <div class="card-price">K10,000</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>Full day coverage</li>
+          <li><i class="ti ti-check"></i>Home, church, portraits + reception</li>
+          <li><i class="ti ti-check"></i>200 retouched images</li>
+          <li><i class="ti ti-check"></i>3-minute highlight video</li>
+          <li><i class="ti ti-check"></i>Delivery via link or email</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Wedding Photography — Standard')">Book Now</button>
+      </div>
+
+      <div class="price-card">
+        <div class="card-tier">Luxury</div>
+        <div class="card-name">Premium</div>
+        <div class="card-price">K15,000</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>Full day coverage</li>
+          <li><i class="ti ti-check"></i>Home, church, portraits + reception</li>
+          <li><i class="ti ti-check"></i>250 retouched images</li>
+          <li><i class="ti ti-check"></i>5-minute highlight video</li>
+          <li><i class="ti ti-check"></i>5 printed & framed couple photos</li>
+          <li><i class="ti ti-check"></i>Delivery via link or email</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Wedding Photography — Premium')">Book Now</button>
+      </div>
+    </div>
+    <div class="note-bar">
+      <i class="ti ti-info-circle"></i>
+      All wedding packages include a complimentary pre-wedding consultation. A 75% deposit is required to secure your date. Customisation available — contact us to build your perfect package.
+    </div>
+  </div>
+
+  <!-- ══ CORPORATE ══ -->
+  <div class="tab-section" id="corporate">
+    <div class="section-header">
+      <h2>Corporate Events Media Services</h2>
+      <p>Professional imagery that builds brand trust and tells your company's story with authority.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="price-card">
+        <div class="card-tier">Starter</div>
+        <div class="card-name">Basic</div>
+        <div class="card-price">K10,000</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>3 hours coverage</li>
+          <li><i class="ti ti-check"></i>100 edited images</li>
+          <li><i class="ti ti-check"></i>Live streaming included</li>
+          <li><i class="ti ti-check"></i>Delivery via link or flash drive</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Corporate — Basic')">Book Now</button>
+      </div>
+
+      <div class="price-card featured">
+        <div class="card-badge">Most Requested</div>
+        <div class="card-tier">Professional</div>
+        <div class="card-name">Standard</div>
+        <div class="card-price">K15,000</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>Half day coverage</li>
+          <li><i class="ti ti-check"></i>200 edited images</li>
+          <li><i class="ti ti-check"></i>3-minute highlight video</li>
+          <li><i class="ti ti-check"></i>Live streaming included</li>
+          <li><i class="ti ti-check"></i>Delivery via link or flash drive</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Corporate — Standard')">Book Now</button>
+      </div>
+
+      <div class="price-card">
+        <div class="card-tier">Executive</div>
+        <div class="card-name">Premium</div>
+        <div class="card-price">K20,000</div>
+        <div class="card-price-note">flat rate</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li><i class="ti ti-check"></i>Full day coverage</li>
+          <li><i class="ti ti-check"></i>250 edited images</li>
+          <li><i class="ti ti-check"></i>5-minute highlight video</li>
+          <li><i class="ti ti-check"></i>Live streaming included</li>
+          <li><i class="ti ti-check"></i>Delivery via link or flash drive</li>
+          <li><i class="ti ti-check"></i>7-day delivery time</li>
+        </ul>
+        <button class="card-cta" onclick="openModal('Corporate — Premium')">Book Now</button>
+      </div>
+    </div>
+    <div class="note-bar">
+      <i class="ti ti-info-circle"></i>
+      Invoice & PO billing accepted. NDAs signed on request. NGO and church discounts available — enquire for details. Retainer packages for recurring events available from K8,000/month.
+    </div>
+  </div>
+
+  <!-- ══ STREAMING & VIDEO ══ -->
+  <div class="tab-section" id="streaming">
+    <div class="section-header">
+      <h2>Live Streaming &amp; Video Production</h2>
+      <p>Professional broadcasts and cinematic video for every occasion and every platform.</p>
+    </div>
+
+    <div class="stream-grid">
+      <div class="wide-card">
+        <i class="ti ti-broadcast"></i>
+        <h3>Live Streaming</h3>
+        <div class="desc">Multi-camera broadcasts for weddings, funerals, conferences, church services, graduations and events. Platform setup included.</div>
+        <div class="pkg-row"><span class="lbl">Basic stream (1 camera)</span><span class="prc">K2,500</span></div>
+        <div class="pkg-row"><span class="lbl">Standard (2 cameras)</span><span class="prc">K4,500</span></div>
+        <div class="pkg-row"><span class="lbl">Premium (3+ cameras)</span><span class="prc">K7,000</span></div>
+        <div class="pkg-row"><span class="lbl">YouTube / Zoom / Facebook setup</span><span class="prc">Included</span></div>
+        <div class="pkg-row"><span class="lbl">Recording + replay link</span><span class="prc">+K500</span></div>
+        <button class="card-cta mt-4" onclick="openModal('Live Streaming Service')">Enquire Now</button>
+      </div>
+
+      <div class="wide-card">
+        <i class="ti ti-movie"></i>
+        <h3>Video Production</h3>
+        <div class="desc">Cinematic storytelling for weddings, corporate promos, social media content and documentary-style films. Delivered in HD.</div>
+        <div class="pkg-row"><span class="lbl">Short film (1–3 min)</span><span class="prc">K3,500</span></div>
+        <div class="pkg-row"><span class="lbl">Event highlight reel</span><span class="prc">K5,000</span></div>
+        <div class="pkg-row"><span class="lbl">Wedding cinematic film</span><span class="prc">K8,000</span></div>
+        <div class="pkg-row"><span class="lbl">Corporate promo (full day)</span><span class="prc">K12,000</span></div>
+        <div class="pkg-row"><span class="lbl">Social media reels (x3)</span><span class="prc">K2,000</span></div>
+        <button class="card-cta mt-4" onclick="openModal('Video Production Service')">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="wide-card" style="max-width:1000px; margin:0 auto 1.25rem;">
+      <i class="ti ti-package"></i>
+      <h3>Photo + Video Combo Packages</h3>
+      <div class="desc">Combine photography and video production for maximum value. Perfect for weddings, corporate events and graduations.</div>
+      <div class="pkg-row"><span class="lbl">Graduation combo (photos + reel)</span><span class="prc">K3,500</span></div>
+      <div class="pkg-row"><span class="lbl">Wedding standard combo</span><span class="prc">K12,000</span></div>
+      <div class="pkg-row"><span class="lbl">Wedding premium combo (full day)</span><span class="prc">K18,000</span></div>
+      <div class="pkg-row"><span class="lbl">Corporate full production combo</span><span class="prc">K22,000</span></div>
+      <div class="pkg-row"><span class="lbl">Live stream + same-day highlight</span><span class="prc">K8,000</span></div>
+      <button class="card-cta mt-4" onclick="openModal('Photo + Video Combo Package')">Enquire Now</button>
+    </div>
+
+    <div class="note-bar" style="max-width:1000px; margin:0 auto;">
+      <i class="ti ti-info-circle"></i>
+      All videos delivered in HD. Music licensing handled for you. Subtitle add-ons available. Church & NGO discount: 15% off any streaming package. Travel within Lusaka included.
+    </div>
+  </div>
+
+  <!-- FOOTER CTA -->
+  <div class="footer-cta-section">
+    <p>Not sure which package suits you best? Let's talk — consultations are always free and obligation-free.</p>
+    <button class="cta-main" onclick="openModal('Free Consultation')">Book a Free Consultation</button>
+  </div>
+
+</div><!-- end pricing-page -->
+
+
+<!-- ══════════════════ BOOKING MODAL ══════════════════ -->
+<div id="bookingModal" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div class="modal-title" id="serviceTitle">Book a Session</div>
+    <div class="modal-sub" id="serviceSubTitle">Fill in your details and we'll confirm your booking shortly.</div>
+
+    <form id="bookingForm" class="mt-2">
+      <input type="text" name="full_name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="date" name="date" required>
+
+      <select name="type">
+        <option value="individual">Individual</option>
+        <option value="graduation">Graduation</option>
+        <option value="corporate">Corporate</option>
+        <option value="weddings">Wedding Event</option>
+        <option value="streaming">Live Streaming / Video</option>
+      </select>
+
+      <select name="package">
+        <option value="basic">Basic Package</option>
+        <option value="standard">Standard Package</option>
+        <option value="premium">Premium Package</option>
+      </select>
+
+      <select name="location">
+        <option value="studio">Studio Shoot</option>
+        <option value="outdoor">Outdoor Shoot</option>
+        <option value="venue">Client Venue / Event Location</option>
+      </select>
+
+      <input type="hidden" name="_subject" value="New Booking Request from Afrowazi Pixels">
+
+      <div class="modal-policy">
+        <strong style="color:var(--gold);">Booking & Payment Policy</strong><br>
+        A 75% non-refundable deposit is required to confirm your booking. The remaining 25% is due upon delivery of final images. Bookings are only secured once the deposit is received.
+      </div>
+
+      <button class="modal-submit" type="submit">Submit Booking</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<div class="footer-basic">
+  <footer>
+    <div class="social">
+      <a href="https://www.instagram.com/afrowazi_pixel_arts?igsh=dnhiMWJ3Y2h1ZWwx"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/16f3aC9hDR/"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/company/afrowazi-pixel-arts/"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.tiktok.com/@afrowazi.pixel.ar?_r=1&_t=ZM-92LjdkU1weR"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="mailto:wazitechbiso@outlook.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://wa.me/260979624554" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="index.html">Home</a></li>
+      <li class="list-inline-item"><a href="about.html">About</a></li>
+      <li class="list-inline-item"><a href="gallery.html">Gallery</a></li>
+      <li class="list-inline-item"><a href="pricing.html">Pricing</a></li>
+      <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+    </ul>
+    <p class="copyright"><a href="tel:+260979624554">+260979624554 </a>Afrowazi Pixel Arts</p>
+    <p class="copyright">© 2026</p>
+  </footer>
+</div>
+
+
+<!-- ══════════════════ SCRIPTS ══════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="assets/js/main.js"></script> -->
+<!-- <script src="assets/js/in.js"></script> -->
+
+<script>
+  /* Mobile nav toggle */
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!open));
+    });
+  }
+
+  /* Tab switching */
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  /* Modal open/close */
+  function openModal(service) {
+    document.getElementById('serviceTitle').innerText = service;
+    document.getElementById('bookingModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('bookingModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* Close on overlay click */
+  document.getElementById('bookingModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  /* Close on Escape key */
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+<script>
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+
+</body>
+</html>
