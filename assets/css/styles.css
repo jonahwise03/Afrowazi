@@ -141,8 +141,8 @@
     color: #ffffff;
   }
   .background-image2{
-  background-image: url('../images/website/traditional/bg3.jpg.jpeg');
-  background-color: rgb(164, 166, 166);
+ /* background-image: url('../images/website/traditional/bg3.jpg.jpeg');*/
+  background-color: #0f1e2e;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -153,8 +153,8 @@
 }
 
 .background-image3{
-  background-image: url('../images/bg2.jpg.jpg.jpeg');
-  background-color: rgb(164, 166, 166);
+  /*background-image: url('../images/bg2.jpg.jpg.jpeg');*/
+  background-color: #0f1e2e;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
